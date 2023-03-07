@@ -31,7 +31,7 @@ function quickSort(arr, left = 0, right = arr.length - 1) {
   return arr;
 }
 
-quickSort([100, -3, 2, 4, 6, 9, 1, 2, 5, 3, 23])
+quickSort([4,6,9,1,2,5,3])
 
 
 
