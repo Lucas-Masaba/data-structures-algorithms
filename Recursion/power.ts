@@ -1,4 +1,4 @@
-function power(base, exp){ 
+function power(base: number, exp: number): number{ 
   if(exp === 0 ) {
     return 1
   }

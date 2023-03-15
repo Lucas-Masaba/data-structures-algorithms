@@ -1,7 +1,7 @@
 // Merge function from earlier
-function merge(arr1, arr2){
+function merge(arr1: number[], arr2: number[]): number[]{
     
-    let results = [];
+    let results: number[] = [];
     let i = 0;
     let j = 0;
   
@@ -26,7 +26,7 @@ function merge(arr1, arr2){
 }
 
 // Recrusive Merge Sort
-function mergeSort(arr){
+function mergeSort(arr: number[]): number[]{
     if(arr.length <= 1) return arr;
     let mid = Math.floor(arr.length/2);
     let left = mergeSort(arr.slice(0,mid));
