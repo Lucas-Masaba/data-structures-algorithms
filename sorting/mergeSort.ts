@@ -34,4 +34,4 @@ function mergeSort(arr: number[]): number[]{
     return merge(left, right);
 }
 
-console.log(mergeSort([12,8,11,4]))
+mergeSort([12,8,11,4])
