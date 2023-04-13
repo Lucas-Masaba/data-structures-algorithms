@@ -1,5 +1,5 @@
-// // UNOPTIMIZED VERSION OF BUBBLE SORT
-// function bubbleSort(arr){
+// UNOPTIMIZED VERSION OF BUBBLE SORT
+// const bubbleSort = (arr: number[]): number[] => {
 //   for(var i = arr.length; i > 0; i--){
 //     for(var j = 0; j < i - 1; j++){
 //       console.log(arr, arr[j], arr[j+1]);

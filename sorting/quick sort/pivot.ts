@@ -20,8 +20,8 @@
 // }
 
 // Version with ES2015 Syntax
-function pivot(arr, start = 0, end = arr.length - 1) {
-  const swap = (arr, idx1, idx2) => {
+const pivot = (arr: number[], start = 0, end = arr.length - 1): number => {
+  const swap = (arr: number[], idx1: number, idx2: number) => {
     [arr[idx1], arr[idx2]] = [arr[idx2], arr[idx1]];
   };
 
