@@ -9,7 +9,6 @@ const same = (arr1: number[], arr2: number[]): boolean => {
     let frequencyCounter2: FrequencyCounter = {}
     for (let val of arr1) {
         frequencyCounter1[val] = (frequencyCounter1[val] || 0) + 1
-        console.log(frequencyCounter1[val])
     }
     for (let val of arr2) {
         frequencyCounter2[val] = (frequencyCounter2[val] || 0) + 1
@@ -17,6 +16,7 @@ const same = (arr1: number[], arr2: number[]): boolean => {
 
     for (let key in frequencyCounter1) {
         const numericKey = parseInt(key)
+        console.log(numericKey)
         if (!(numericKey ** 2 in frequencyCounter2)) {
             return false
         }
@@ -27,4 +27,4 @@ const same = (arr1: number[], arr2: number[]): boolean => {
     return true
 }
 
-same([1, 2, 3, 2, 5], [9, 1, 4, 4, 11])
+same([1, 2, 3, 2, 5], [9, 1, 4, 4, 25]) // true
