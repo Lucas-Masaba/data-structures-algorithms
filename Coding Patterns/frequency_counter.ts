@@ -13,13 +13,16 @@ const same = (arr1: number[], arr2: number[]): boolean => {
     for (let val of arr2) {
         frequencyCounter2[val] = (frequencyCounter2[val] || 0) + 1
     }
+    console.log(frequencyCounter1)
+    console.log(frequencyCounter2)
 
     for (let key in frequencyCounter1) {
         const numericKey = parseInt(key)
-        console.log(numericKey)
         if (!(numericKey ** 2 in frequencyCounter2)) {
             return false
         }
+        console.log(`first ${frequencyCounter2[numericKey ** 2]}`) 
+        console.log(`second ${frequencyCounter1[key]}`)
         if (frequencyCounter2[numericKey ** 2] !== frequencyCounter1[key]) {
             return false
         }
