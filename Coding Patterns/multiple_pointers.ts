@@ -14,18 +14,18 @@
 // You must do this with constant or O(1) space and O(n) time.
 
 const countUniqueValues = (arr: number[]): number => {
-  if (arr.length === 0) return 0
-  let i = 0
-  let j = 1
-  let count = 1
+  if (arr.length === 0) return 0;
+  let i = 0;
+  let j = 1;
+  let count = 1;
 
   while (j < arr.length) {
     if (arr[i] !== arr[j]) {
       i = j
-      count++
+      count++;
     }
     j++
   }
-  return count
+  return count;
 }
-countUniqueValues([1, 2, 2, 5, 7, 7, 99]) // 5
+countUniqueValues([1, 2, 2, 5, 7, 7, 99]); // 5
