@@ -1,4 +1,4 @@
-function maxSubarraySum(arr, num){
+function maxSubarraySum(arr: number[], num: number){
   let maxSum = 0;
   let tempSum = 0;
   if (arr.length < num) return null;
