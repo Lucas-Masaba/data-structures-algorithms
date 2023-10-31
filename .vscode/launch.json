@@ -12,7 +12,7 @@
       "type": "node-terminal",
       "name": "Debug Current TS File (ts-node)",
       "request": "launch",
-      "command": "ts-node -- ${fileBasenameNoExtension}",
+      "command": "npx ts-node -- ${fileBasenameNoExtension}",
       "cwd": "${fileDirname}"
     },
     {
