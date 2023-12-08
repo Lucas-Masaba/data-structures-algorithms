@@ -29,19 +29,24 @@
 // 6 repeat the process again but with the first and last array excluded
 
 
-const snail = (array) => {
+const snail = (array: number[][]): number[] => {
   
-  let results = []
-  let k = array.length
+  let results: number[] = []
+  let k: number = array.length
   while(array.length)  {
-    results.push(...array.shift())
+    const shiftedArray = array.shift();
+    if (shiftedArray !== undefined) {
+      results.push(...shiftedArray);
+    }
     for(let i = 0; i < array.length; i++){
-      results.push(array[i].pop())
+      const popped = array[i].pop()
+      if(popped !== undefined) results.push(popped)
     }
 
     results.push(...(array.pop() || []).reverse())
     for(let i = array.length - 1; i >= 0; i--){
-      results.push(array[i].shift())
+      const shifted = array[i].shift()
+      if(shifted !== undefined) results.push(shifted)
     }
   }
   return results 

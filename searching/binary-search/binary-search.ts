@@ -1,4 +1,4 @@
-function binarySearch(array, val, start = 0, end = array.length - 1){
+const binarySearch = (array: number[], val: number, start = 0, end = array.length - 1): number => {
   // add whatever parameters you deem necessary - good luck!
 
   let pivot = Math.floor((start + end) / 2)

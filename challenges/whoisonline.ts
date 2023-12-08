@@ -59,18 +59,30 @@
 //           away: ['Bob']
 //           }
 
-const whosOnline = (friends) => {
-  let onlineArr = []
-  let awayArr = []
-  let offlineArr = []
-  let returnObj = {}
+interface Friends {
+  username: string;
+  status: 'online' | 'offline' | 'away';
+  lastActivity: number;
+}
+
+interface Result {
+  online?: string[];
+  offline?: string[];
+  away?: string[];
+}
+
+const whosOnline = (friends: Friends[]): Result => {
+  let onlineArr: string[] = [];
+  let awayArr: string[] = [];
+  let offlineArr: string[] = [];
+  let returnObj: Result = {};
 
   if (!friends.length) {
     return {}
   }
 
   friends.forEach(friend => {
-    if (friend.length) {
+    if (!friend || friend.status === undefined) {
       console.log('Here')
       return
     } else if (friend.status === 'online' && friend.lastActivity > 10) {
@@ -99,7 +111,7 @@ console.log(whosOnline([{
   username: 'Lucy',
   status: 'offline',
   lastActivity: 22
-}, {}, {
+}, {
   username: 'Bob',
   status: 'online',
   lastActivity: 104

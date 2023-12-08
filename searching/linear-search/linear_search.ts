@@ -1,4 +1,4 @@
-function linearSearch(arr, val) {
+const linearSearch = (arr: number[], val: number): number => {
   // add whatever parameters you deem necessary - good luck!
   for (let i = 0; i < arr.length; i++) {
     if (arr[i] === val) {

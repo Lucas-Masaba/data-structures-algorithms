@@ -8,10 +8,14 @@
 // someRecursive([4,6,8], isOdd) // false
 // someRecursive([4,6,8], val => val > 10); // false
 
-function someRecursive(array, callback) {
+type Callback = (val: number) => boolean
+
+const someRecursive = (array: number[], callback: Callback): boolean => {
   if (array.length === 0) return false;
   if (callback(array[0])) return true;
   return someRecursive(array.slice(1),callback);
 }
 
-someRecursive([4,6,8])
+const isOdd = (val: number): boolean => val % 2 !== 0;
+
+console.log(someRecursive([4,6,8], isOdd)) // false
