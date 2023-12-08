@@ -115,5 +115,3 @@ If you like this repository, you can contribute to improving these solutions.
 I would like to thank Colt Steele and his Udemy course, "The Missing Computer Science and Coding Interview Bootcamp" for inspiring the creation of this repository
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
